@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/UILibraryDemo.iml" filepath="$PROJECT_DIR$/UILibraryDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-uilib-release/android-uilib-release.iml" filepath="$PROJECT_DIR$/android-uilib-release/android-uilib-release.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dJISDKLIB/dJISDKLIB.iml" filepath="$PROJECT_DIR$/dJISDKLIB/dJISDKLIB.iml" />
     </modules>
   </component>
 </project>
