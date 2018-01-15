@@ -30,7 +30,7 @@
 
     <!-- SDK requirement permission end -->
     <application
-        android:name=".DemoApplication"
+        android:name=".MApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

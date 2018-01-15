@@ -37,23 +37,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_main);
-        loginAccount();
 
-    }
-
-    private void loginAccount(){
-
-        UserAccountManager.getInstance().logIntoDJIUserAccount(this,
-                new CommonCallbacks.CompletionCallbackWith<UserAccountState>() {
-                    @Override
-                    public void onSuccess(final UserAccountState userAccountState) {
-                        Log.e(TAG, "Login Success");
-                    }
-                    @Override
-                    public void onFailure(DJIError error) {
-                        Log.e(TAG, "Login Error:" + error.getDescription());
-                    }
-                });
     }
 
 }
