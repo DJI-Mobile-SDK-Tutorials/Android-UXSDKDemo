@@ -1,4 +1,4 @@
-package com.dji.uilibrarydemo;
+package com.dji.uxsdkdemo;
 
 import android.app.Application;
 import android.content.Context;
@@ -21,7 +21,7 @@ import dji.sdk.useraccount.UserAccountManager;
 
 public class DemoApplication extends Application {
 
-    public static final String FLAG_CONNECTION_CHANGE = "uilibrary_demo_connection_change";
+    public static final String FLAG_CONNECTION_CHANGE = "uxsdk_demo_connection_change";
 
     private static BaseProduct mProduct;
     private Handler mHandler;

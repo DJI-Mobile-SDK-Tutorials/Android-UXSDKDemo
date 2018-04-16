@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dji.uilibrarydemo">
+    package="com.dji.uxsdkdemo">
 
     <!-- DJI SDK need permission -->
     <uses-permission android:name="android.permission.BLUETOOTH" />

@@ -37,6 +37,7 @@ android {
         doNotStrip "*/*/libFRCorkscrew.so"
         doNotStrip "*/*/libUpgradeVerify.so"
         doNotStrip "*/*/libFR.so"
+        exclude 'META-INF/rxjava.properties'
     }
 }
 
@@ -46,7 +47,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile ('com.dji:dji-uilibrary:4.4.1')
-    provided ('com.dji:dji-sdk-provided:4.4.1')
+    compile ('com.dji:dji-uxsdk:4.5')
+    provided ('com.dji:dji-sdk-provided:4.5')
 
 }

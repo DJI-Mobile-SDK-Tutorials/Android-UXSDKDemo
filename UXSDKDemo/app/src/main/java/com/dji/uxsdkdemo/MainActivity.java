@@ -1,4 +1,4 @@
-package com.dji.uilibrarydemo;
+package com.dji.uxsdkdemo;
 
 import android.Manifest;
 import android.os.Build;
