@@ -36,17 +36,27 @@ android {
         doNotStrip "*/*/libFRCorkscrew.so"
         doNotStrip "*/*/libUpgradeVerify.so"
         doNotStrip "*/*/libFR.so"
+
+        pickFirst 'lib/*/libstlport_shared.so'
+        pickFirst 'lib/*/libRoadLineRebuildAPI.so'
+        pickFirst 'lib/*/libGNaviUtils.so'
+        pickFirst 'lib/*/libGNaviMapex.so'
+        pickFirst 'lib/*/libGNaviData.so'
+        pickFirst 'lib/*/libGNaviMap.so'
+        pickFirst 'lib/*/libGNaviSearch.so'
+
+        exclude '/lib/armeabi-v7a/libChineseFontPkg.so'
         exclude 'META-INF/rxjava.properties'
     }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile ('com.dji:dji-uxsdk:4.5.1')
-    provided ('com.dji:dji-sdk-provided:4.5.1')
+    compile ('com.dji:dji-uxsdk:4.6')
+    provided ('com.dji:dji-sdk-provided:4.6')
 
 }
