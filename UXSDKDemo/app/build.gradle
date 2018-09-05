@@ -56,7 +56,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile ('com.dji:dji-uxsdk:4.6')
-    provided ('com.dji:dji-sdk-provided:4.6')
+    compile ('com.dji:dji-uxsdk:4.7.1')
+    provided ('com.dji:dji-sdk-provided:4.7.1')
 
 }
