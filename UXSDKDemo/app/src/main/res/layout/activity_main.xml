@@ -203,7 +203,7 @@
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/signal"
-        custom:excludeItem="aircraftBatteryTemperature|ESCStatus"
+        custom:excludeItem="ESCStatus"
         android:visibility="gone"/>
 
 </RelativeLayout>
