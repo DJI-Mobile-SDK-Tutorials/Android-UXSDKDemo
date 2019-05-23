@@ -16,6 +16,7 @@ import dji.common.useraccount.UserAccountState;
 import dji.common.util.CommonCallbacks;
 import dji.sdk.base.BaseComponent;
 import dji.sdk.base.BaseProduct;
+import dji.sdk.sdkmanager.DJISDKInitEvent;
 import dji.sdk.sdkmanager.DJISDKManager;
 import dji.sdk.useraccount.UserAccountManager;
 
@@ -134,6 +135,11 @@ public class DemoApplication extends Application {
                                 newComponent));
 
             }
+            @Override
+            public void onInitProcess(DJISDKInitEvent djisdkInitEvent, int i) {
+
+            }
+
         };
 
     }
