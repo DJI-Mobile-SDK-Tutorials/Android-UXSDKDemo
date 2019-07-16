@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+//Please comment the following two lines of code if you use your own packagingOptions Configurations.
+apply from : "https://raw.githubusercontent.com/DJI-Mobile-SDK-Tutorials/Android-CommonConfig/master/config_sample_packagingOptions.gradle"
+apply from : "https://raw.githubusercontent.com/DJI-Mobile-SDK-Tutorials/Android-CommonConfig/master/config_sample_dependencies_uxsdk.gradle"
 
 android {
     compileSdkVersion 27
@@ -26,28 +29,24 @@ android {
         abortOnError false
     }
 
-    packagingOptions{
-        doNotStrip "*/*/libdjivideo.so"
-        doNotStrip "*/*/libSDKRelativeJNI.so"
-        doNotStrip "*/*/libFlyForbid.so"
-        doNotStrip "*/*/libduml_vision_bokeh.so"
-        doNotStrip "*/*/libyuv2.so"
-        doNotStrip "*/*/libGroudStation.so"
-        doNotStrip "*/*/libFRCorkscrew.so"
-        doNotStrip "*/*/libUpgradeVerify.so"
-        doNotStrip "*/*/libFR.so"
+// Please uncomment the following code if you use your own packagingOptions Configurations.
+//    packagingOptions{
+//        doNotStrip "*/*/libdjivideo.so"
+//        doNotStrip "*/*/libSDKRelativeJNI.so"
+//        doNotStrip "*/*/libFlyForbid.so"
+//        doNotStrip "*/*/libduml_vision_bokeh.so"
+//        doNotStrip "*/*/libyuv2.so"
+//        doNotStrip "*/*/libGroudStation.so"
+//        doNotStrip "*/*/libFRCorkscrew.so"
+//        doNotStrip "*/*/libUpgradeVerify.so"
+//        doNotStrip "*/*/libFR.so"
+//        doNotStrip "*/*/libDJIFlySafeCore.so"
+//        doNotStrip "*/*/libdjifs_jni.so"
+//        doNotStrip "*/*/libsfjni.so"
 
-        pickFirst 'lib/*/libstlport_shared.so'
-        pickFirst 'lib/*/libRoadLineRebuildAPI.so'
-        pickFirst 'lib/*/libGNaviUtils.so'
-        pickFirst 'lib/*/libGNaviMapex.so'
-        pickFirst 'lib/*/libGNaviData.so'
-        pickFirst 'lib/*/libGNaviMap.so'
-        pickFirst 'lib/*/libGNaviSearch.so'
-
-        exclude '/lib/armeabi-v7a/libChineseFontPkg.so'
-        exclude 'META-INF/rxjava.properties'
-    }
+//        exclude '/lib/armeabi-v7a/libChineseFontPkg.so'
+//        exclude 'META-INF/rxjava.properties'
+//    }
 }
 
 dependencies {
@@ -56,7 +55,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
 
-    compile ('com.dji:dji-uxsdk:4.10')
-    provided ('com.dji:dji-sdk-provided:4.10')
+// Please uncomment the following code if you use your own packagingOptions Configurations.
+//    compile ('com.dji:dji-uxsdk:4.10')
+//    provided ('com.dji:dji-sdk-provided:4.10')
 
 }
