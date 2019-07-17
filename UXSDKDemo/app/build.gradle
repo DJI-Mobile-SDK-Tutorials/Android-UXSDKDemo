@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-//Please comment the following two lines of code if you use your own packagingOptions Configurations.
+// Please comment the following two lines of code if you use your own packagingOptions Configurations.
 apply from : "https://raw.githubusercontent.com/DJI-Mobile-SDK-Tutorials/Android-CommonConfig/master/config_sample_packagingOptions.gradle"
 apply from : "https://raw.githubusercontent.com/DJI-Mobile-SDK-Tutorials/Android-CommonConfig/master/config_sample_dependencies_uxsdk.gradle"
 
@@ -55,7 +55,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
 
-// Please uncomment the following code if you use your own packagingOptions Configurations.
+// Please uncomment the following code if you use your own sdk version.
 //    compile ('com.dji:dji-uxsdk:4.10')
 //    provided ('com.dji:dji-sdk-provided:4.10')
 
