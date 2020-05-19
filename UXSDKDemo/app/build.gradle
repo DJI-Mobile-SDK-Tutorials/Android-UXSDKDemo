@@ -94,3 +94,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
 }
+
+// Please uncomment the following code if you use your own sdk version.
+apply from : "https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/msdk/Android-CommonConfig/config_sample_all.gradle"
+apply from : "https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/msdk/Android-CommonConfig/config_sample_dependencies_uxsdk.gradle"
