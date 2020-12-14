@@ -3,15 +3,9 @@ package com.dji.uxsdkdemo;
 import android.Manifest;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
-import dji.common.error.DJIError;
-import dji.common.useraccount.UserAccountState;
-import dji.common.util.CommonCallbacks;
-import dji.sdk.useraccount.UserAccountManager;
 
 public class MainActivity extends AppCompatActivity {
 
