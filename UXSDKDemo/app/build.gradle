@@ -2,21 +2,22 @@ apply plugin: 'com.android.application'
 
 repositories {
     mavenLocal()
+    maven { url 'https://mapbox.bintray.com/mapbox' }
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29.0.3'
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 30
         multiDexEnabled true
         ndk {
             // On x86 devices that run Android API 23 or above, if the application is targeted with API 23 or
             // above, FFmpeg lib might lead to runtime crashes or warnings.
-            abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a'
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
 
@@ -86,8 +87,8 @@ android {
 
 
 dependencies {
-    implementation 'androidx.multidex:multidex:2.0.0'
-    implementation('com.dji:dji-sdk:4.14-trial1', {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation('com.dji:dji-sdk:4.15', {
         /**
          * Uncomment the "library-anti-distortion" if your app does not need Anti Distortion for Mavic 2 Pro and Mavic 2 Zoom.
          * Uncomment the "fly-safe-database" if you need database for release, or we will download it when DJISDKManager.getInstance().registerApp
@@ -97,15 +98,15 @@ dependencies {
         exclude module: 'library-anti-distortion'
         //exclude module: 'fly-safe-database'
     })
-    compileOnly ('com.dji:dji-sdk-provided:4.14-trial1')
+    compileOnly ('com.dji:dji-sdk-provided:4.15')
 
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.core:core:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-rc01'
-    implementation 'androidx.annotation:annotation:1.0.0'
-    implementation ('com.dji:dji-uxsdk:4.14-trial1', {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation ('com.dji:dji-uxsdk:4.14', {
         /**
          * Uncomment the "library-anti-distortion" if your app does not need Anti Distortion for Mavic 2 Pro and Mavic 2 Zoom.
          * Uncomment the "fly-safe-database" if you need database for release, or we will download it when DJISDKManager.getInstance().registerApp
@@ -113,14 +114,11 @@ dependencies {
          * Both will greatly reduce the size of the APK.
          */
         exclude module: 'library-anti-distortion'
+        exclude module: 'dji-sdk'
         //exclude module: 'fly-safe-database'
     })
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
 
 }
-
-// Please uncomment the following code if you use your own sdk version.
-apply from : "https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/msdk/Android-CommonConfig/config_sample_all.gradle"
-apply from : "https://terra-1-g.djicdn.com/71a7d383e71a4fb8887a310eb746b47f/msdk/Android-CommonConfig/config_sample_dependencies_uxsdk.gradle"
