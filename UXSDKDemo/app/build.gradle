@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 repositories {
     mavenLocal()
-    maven { url 'https://mapbox.bintray.com/mapbox' }
 }
 
 android {
