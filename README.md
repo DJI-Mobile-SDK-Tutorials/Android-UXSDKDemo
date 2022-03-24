@@ -8,8 +8,8 @@ This UXSDKDemo is designed for you to gain a basic understanding of the DJI Andr
 
  - Android Studio 2.0+
  - Android System 4.1+
- - DJI Android SDK 4.16
- - DJI Android UX SDK 4.15
+ - DJI Android SDK 4.16.1
+ - DJI Android UX SDK 4.16
 
 ## Tutorial
 
